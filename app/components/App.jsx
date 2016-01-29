@@ -1,4 +1,4 @@
-/* global Template, ReactMeteorData */
+/* global ReactMeteorData */
 import React, {Component} from 'react';
 import reactMixin from 'react-mixin';
 import BlazeTemplate from './BlazeTemplate';
