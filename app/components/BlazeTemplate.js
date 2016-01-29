@@ -1,10 +1,10 @@
-/* global Blaze */
+/* global Template, Blaze */
 import React, {component} from 'react';
 import ReactDOM from 'react-dom';
 
 export default class BlazeTemplate extends React.Component {
   static propTypes = {
-    template: React.PropTypes.any.isRequired,
+    templateName: React.PropTypes.string.isRequired,
     component: React.PropTypes.any,
   }
   static defaultProps = {
@@ -15,8 +15,8 @@ export default class BlazeTemplate extends React.Component {
     return false;
   }
   componentDidMount() {
-    let {template} = this.props;
-    this.view = Blaze.render(template, ReactDOM.findDOMNode(this.refs.root));
+    let {templateName} = this.props;
+    this.view = Blaze.render(Template[templateName], ReactDOM.findDOMNode(this.refs.root));
   }
   componentWillUnmount() {
     Blaze.remove(this.view);

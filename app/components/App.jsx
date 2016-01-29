@@ -21,12 +21,9 @@ export default class App extends Component {
     let userCount = Users.find().fetch().length;
     let postsCount = Posts.find().fetch().length;
 
-    let loginButtons;
-    if (!Meteor.isServer) loginButtons = <BlazeTemplate template={Template.loginButtons} />;
-
     return (
       <div className="App">
-        {loginButtons}
+        <BlazeTemplate templateName="loginButtons" />
         <h1>Hello Webpack!</h1>
         <p>There are {userCount} users in the Minimongo  (login to change)</p>
         <p>There are {postsCount} posts in the Minimongo  (autopublish removed)</p>
