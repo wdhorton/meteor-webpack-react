@@ -3,7 +3,7 @@
 This is a Meteor project skeleton where the client (in React) and server get built by Webpack.  In dev mode,
 webpack-dev-server is used with [react-transform](https://github.com/gaearon/babel-plugin-react-transform).  There are a bunch of run and build scripts to make things more convenient.
 
-Meteor's builtin ES2015 support doesn't allow you to `import`(/`require`), but **with this project you can use all ES2015/ES7 features supported by Babel/corejs/regenerator on the client and server today**, thanks to Webpack.  There are even source maps on the server thanks to https://github.com/evanw/node-source-map-support!  
+Meteor's builtin ES2015 support doesn't allow you to `import`(/`require`), but **with this project you can use all ES2015/ES7 features supported by Babel/corejs/regenerator on the client and server today**, thanks to Webpack.  ~~There are even source maps on the server thanks to https://github.com/evanw/node-source-map-support!~~ (better source map support will be reintegrated soon, or you can check out the `webpack-meteor-tools` branch!)
 
 There is a port of the Meteor simple-todos tutorial to this stack on the `simple-todos` branch.
 
@@ -75,6 +75,12 @@ This runs the app as if it were in production, but it's still watching your file
 ```
 Make sure to wait for Meteor to say it's listening, and for the client and server `webpack --watch` processes to print out module/bundle info.  The site won't work until all are ready.
 
+
+## Karma testing
+
+```
+> npm run karma
+```
 
 ## Deployment
 
